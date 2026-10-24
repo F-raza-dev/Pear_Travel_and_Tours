@@ -1,0 +1,1102 @@
+# MASTER PROMPT — PEARL TRAVEL & TOURS WEBSITE
+
+Act as a senior UI/UX designer, full-stack software engineer, travel-tech product architect, SEO specialist, and conversion-rate optimization expert.
+
+Build a complete, professional, production-ready travel agency website for **Pearl Travel & Tours**, using the uploaded website screenshot as the primary design reference and the uploaded Pearl Travel & Tours logo as the official brand asset.
+
+Do not merely create a landing-page mockup or a static visual prototype. Build a polished, responsive website with real navigation, reusable components, functional inquiry forms, structured travel content, database integration, and a clear path to deployment.
+
+Make the best reasonable design and implementation decisions independently. Do not stop to ask me about routine design or technical decisions.
+
+---
+
+## 1. PROJECT IDENTITY
+
+**Business name:** Pearl Travel & Tours  
+**Website:** https://pearltravelandtours.com  
+**Business type:** Travel agency, tour operator, holiday packages, hotel reservations, domestic tourism, international travel, flight booking inquiries, and Umrah travel services.
+
+**Primary market:** Pakistan, with an initial focus on Pakistani customers and the ability to serve international travelers.
+
+**Brand personality:**
+- Trustworthy and professional
+- Premium but accessible
+- Modern and welcoming
+- Travel-focused and inspiring
+- Transparent and customer-oriented
+
+**Brand slogan:** “Explore the World with Pearl.”
+
+Use the slogan as proposed marketing copy, not as a replacement for the official logo or any existing brand wording.
+
+### Official logo instructions
+
+Use the uploaded Pearl Travel & Tours logo throughout the website, including the navbar, footer, favicon where practical, and other appropriate brand placements.
+
+Strictly preserve the original logo artwork, symbol, colors, typography, proportions, and spelling. Do not recreate, distort, recolor, crop, or replace the logo with a text-only imitation.
+
+Use an appropriately sized transparent version of the supplied logo. If the logo is too large for the navbar, scale it proportionally without changing its design.
+
+---
+
+## 2. DESIGN REFERENCE — FOLLOW THE UPLOADED SCREENSHOT
+
+Treat the uploaded website screenshot as the main visual specification.
+
+Reproduce its design language, section sequence, layout proportions, image treatments, spacing, and overall visual hierarchy while improving readability, responsiveness, accessibility, and functionality.
+
+Do not produce a generic travel template that merely shares similar colors.
+
+### Brand color palette
+
+Use these colors as the initial design system:
+
+- Deep navy blue: #003566
+- Dark navy: #00264D
+- Golden yellow: #F4B400
+- White: #FFFFFF
+- Soft light gray: #F5F6F8
+- Body text: #353B45
+- Muted text: #777F8A
+
+Use navy for primary navigation, footer backgrounds, and important actions. Use golden yellow for emphasis, selected highlights, badges, and primary call-to-action buttons. Use white and light gray to maintain a clean, premium travel-agency aesthetic.
+
+Extract the closest practical colors from the supplied logo if necessary.
+
+### Typography
+
+Use a modern, readable font combination such as Poppins for headings and Inter for body text.
+
+Headings should be bold and clear, with selected words highlighted in golden yellow. Use comfortable line heights and consistent spacing.
+
+### Visual style
+
+- Clean white sections with generous whitespace.
+- High-quality destination photography.
+- Large panoramic hero imagery.
+- Circular or rounded destination thumbnails.
+- Rounded package cards with subtle shadows.
+- Consistent image aspect ratios.
+- Soft hover animations and transitions.
+- Professional icons from Lucide or a consistent icon library.
+- Subtle gradients or dark overlays where needed for text contrast.
+- No excessive glassmorphism, unnecessary animations, or clutter.
+- No emoji-based icons in place of professional UI icons.
+
+Use real, high-quality, appropriately licensed travel photography. Do not stretch images, use unrelated placeholder graphics, or repeat the same destination photograph across the entire page.
+
+---
+
+## 3. TECHNOLOGY STACK
+
+Build the application using:
+
+- React with TypeScript.
+- Vite as the frontend build tool.
+- Tailwind CSS for styling.
+- shadcn/ui where appropriate.
+- React Router for client-side routing.
+- Lucide React for icons.
+- React Hook Form and Zod for form validation.
+- Supabase for database, authentication when required, and secure server-side functionality.
+- A reliable email delivery service through a server-side function for sending inquiry notifications.
+- A suitable SEO implementation for page titles, descriptions, canonical URLs, structured data, and social sharing metadata.
+
+Use current, compatible packages supported by the project environment.
+
+Follow a modular architecture with reusable components, strongly typed data models, clear separation of UI and business logic, and maintainable code.
+
+Do not expose service-role keys, email-provider secrets, or other sensitive credentials in frontend code.
+
+If Supabase credentials or email-provider credentials are unavailable, create the integration structure and clearly document the exact configuration required. Do not falsely claim that a real backend or email delivery is operational until it has been configured and tested.
+
+---
+
+## 4. RESPONSIVE NAVIGATION BAR
+
+Create a premium, responsive navigation bar inspired by the reference screenshot.
+
+### Desktop navigation
+
+Left side:
+- Official Pearl Travel & Tours logo.
+
+Right side:
+- Home
+- About Us
+- Explore / Destinations
+- Tours & Packages
+- Hotels
+- Contact Us
+- Book / Inquire
+
+Use a clean white background with a subtle shadow or bottom border.
+
+The active navigation item should have a clear visual indicator. Use golden yellow for appropriate hover and active states.
+
+Make the primary booking or inquiry action visually prominent.
+
+### Mobile navigation
+
+Implement a proper mobile menu with:
+- Logo on the left.
+- Menu toggle on the right.
+- Accessible expandable navigation.
+- Easy-to-tap links.
+- A visible booking or inquiry action.
+
+The navbar must not overlap page content or become excessively tall on mobile.
+
+---
+
+## 5. HOMEPAGE — RECREATE THE REFERENCE DESIGN
+
+Build the homepage in the following sequence.
+
+### Section A: Hero banner and travel search
+
+Create a full-width, visually impressive hero banner inspired by the screenshot.
+
+Use a beautiful panoramic image featuring a recognizable international city skyline or an attractive travel destination. Add a subtle dark overlay to ensure text readability.
+
+On the left, display:
+
+**Headline:** “Explore The World Today”
+
+Highlight selected words in golden yellow.
+
+Supporting copy:
+“Discover unforgettable destinations, carefully selected stays, and travel experiences designed around you.”
+
+Add a prominent golden-yellow “Book Now” button that takes the visitor to the booking or inquiry section.
+
+On the right, create a compact, modern travel-search panel inspired by the screenshot.
+
+Include these fields:
+- Destination
+- Travel type
+- Departure date
+- Return date
+- Number of travelers
+- Search / Find My Trip button
+
+Travel types can include Domestic Tours, International Tours, Umrah, Hotels, and Flight Booking.
+
+Ensure that all fields work, validate dates, and provide clear feedback. Return date must not be earlier than departure date.
+
+The search action should navigate to relevant filtered results or populate a booking inquiry form. Never present a search as a confirmed booking.
+
+On mobile, stack the hero content and search form elegantly.
+
+### Section B: Why choose Pearl Travel & Tours?
+
+Create three evenly spaced service highlights with elegant icons.
+
+1. **Competitive Prices**  
+   Discover suitable travel options with transparent pricing and no invented fees.
+
+2. **Easy Booking**  
+   Send your travel requirements through a simple, user-friendly inquiry process.
+
+3. **24/7 Travel Support**  
+   Present the support offering only to the extent it is actually available. If round-the-clock support has not been verified, use “Dedicated Travel Support” instead.
+
+Use a white background, gold accents, short descriptions, and consistent icon sizing.
+
+### Section C: Top destinations
+
+Heading: “Our Top Destinations”
+
+Supporting text:
+“Find inspiration for your next unforgettable journey.”
+
+Use a horizontal or responsive grid of five destination cards, inspired by the circular destination images in the reference.
+
+Suggested destinations:
+- Dubai, UAE
+- Istanbul, Türkiye
+- Makkah, Saudi Arabia
+- Madinah, Saudi Arabia
+- Northern Pakistan
+
+Each card should contain:
+- High-quality destination image.
+- Destination name.
+- Short descriptive text where appropriate.
+- View Destination action.
+
+Use circular or rounded image treatments similar to the reference.
+
+Clicking a destination should open a destination detail page or filter relevant tour packages.
+
+These are initial suggested destinations and must be editable through the content management system.
+
+### Section D: Find the perfect package
+
+Create a visually rich, full-width section using a scenic landscape background with a subtle overlay.
+
+Heading: “Find The Perfect Package”
+
+Supporting text:
+“Explore memorable journeys, thoughtfully planned for every kind of traveler.”
+
+Show four prominent tour-package cards.
+
+Suggested initial categories:
+- Northern Pakistan Adventures
+- Dubai Getaways
+- Umrah Packages
+- International Holidays
+
+Each card should include:
+- Package image.
+- Package title.
+- Destination.
+- Duration, when verified.
+- Starting price, only when supplied and verified.
+- Short description.
+- View Details button.
+- Inquire Now button.
+
+Use rounded images, subtle card overlays, readable text, and golden-yellow action buttons.
+
+Do not invent package prices, availability, inclusions, or schedules. Where real details are not yet available, display “Request a Quote” rather than a fabricated amount.
+
+### Section E: Hotel listings
+
+Heading: “Our Hotels”
+
+Supporting text:
+“Find comfortable stays for your next destination.”
+
+Create a responsive grid of hotel cards inspired by the reference.
+
+Each hotel card should include:
+- Hotel photograph.
+- Hotel name.
+- City and country.
+- Star category, only if verified.
+- Price per night, only if provided and current.
+- Relevant facilities, only when verified.
+- Check Availability or Inquire Now button.
+
+Provide example destination filters for:
+- Karachi
+- Islamabad
+- Lahore
+- Dubai
+- Makkah
+- Madinah
+
+These are filters, not claims that hotels are already contracted or available.
+
+Never invent hotel names, review ratings, official affiliations, or live availability. Populate the production database with verified hotel information before presenting entries as real bookable inventory.
+
+### Section F: Exotic places / destination showcase
+
+Create a large destination-gallery section inspired by the wide featured image and smaller thumbnails in the screenshot.
+
+Heading: “Go To Exotic Places”
+
+Use:
+- One large featured destination photograph.
+- Four smaller thumbnail images below or beside it.
+- Smooth thumbnail selection.
+- A visible destination title and short description.
+- A View Destination button.
+
+Suggested destinations include Istanbul, Hunza Valley, Skardu, and the Maldives.
+
+When a thumbnail is selected, update the featured image and its associated text. Ensure the gallery works using mouse, touch, and keyboard controls.
+
+### Section G: About our company
+
+Heading: “Our Company About Us”
+
+Create a two-column layout:
+- Left: company introduction, supporting text, and Learn More button.
+- Right: a high-quality travel-related image or a branded travel-service visual.
+
+Suggested copy:
+
+“Pearl Travel & Tours helps travelers discover destinations, plan memorable holidays, explore tour packages, and submit travel requests through a convenient, customer-focused service. Our goal is to make travel planning clearer, easier, and more enjoyable.”
+
+Keep the content factual and editable.
+
+Do not invent founding dates, years of experience, awards, customer totals, industry certifications, or official partnerships.
+
+Include links to About Us, Services, and Contact Us.
+
+### Section H: Client testimonials
+
+Heading: “What Our Clients Say”
+
+Create a clean testimonial section with three testimonial cards.
+
+Each card may include:
+- Customer name.
+- Review text.
+- Rating, if supported by an authentic review.
+- Source or review date, where available.
+
+Do not fabricate customer testimonials, ratings, photographs, or Google review counts.
+
+Until genuine testimonials are provided, use clearly labeled preview content in development and hide the testimonial section on the production website until verified reviews are added.
+
+Provide a structure for adding authentic customer feedback later.
+
+### Section I: Meet our travel guides
+
+Recreate the three-person team section from the screenshot, using elegant circular or oval portrait treatments.
+
+Heading: “Meet Our Travel Guides”
+
+Each profile should support:
+- Real team member photograph.
+- Name.
+- Position or specialty.
+- Short professional biography.
+- Optional contact or profile link.
+
+Use neutral, clearly labeled development placeholders only during implementation.
+
+Do not invent employee identities or claim that stock-photo subjects are Pearl Travel & Tours employees.
+
+Allow profiles to be populated from the content management system.
+
+### Section J: Final call to action
+
+Before the footer, create a visually attractive conversion section.
+
+Headline:
+“Your Next Journey Starts With Pearl.”
+
+Supporting text:
+“Tell us where you want to go, and let our team help you plan your trip.”
+
+Buttons:
+- Explore Packages
+- Contact Our Team
+
+The buttons must navigate to their respective pages or inquiry sections.
+
+### Section K: Footer
+
+Use a deep navy-blue footer inspired by the screenshot.
+
+Include four columns:
+
+**Column 1: Brand**
+- Official logo.
+- Short company description.
+- Social media links, only when actual profile URLs are configured.
+
+**Column 2: Quick Links**
+- Home
+- About Us
+- Destinations
+- Tour Packages
+- Hotels
+- Contact Us
+
+**Column 3: Our Services**
+- Domestic Tours
+- International Tours
+- Umrah Travel
+- Hotel Reservations
+- Flight Booking Inquiries
+- Customized Holidays
+
+**Column 4: Contact Us**
+- Verified telephone and WhatsApp contacts.
+- Business email.
+- Verified office address.
+- Business hours, once confirmed.
+
+Add a newsletter form only if it can be connected to a functioning subscriber-management system with consent and unsubscribe support.
+
+At the bottom, include:
+- Copyright notice.
+- Privacy Policy.
+- Terms & Conditions.
+- Cancellation / Refund Policy.
+
+Use actual policy content appropriate to the business and obtain approval before publication. Do not display broken links or empty social media icons.
+
+---
+
+## 6. REQUIRED WEBSITE PAGES
+
+Build all of the following pages with consistent branding, responsive layouts, and functioning navigation.
+
+### 1. Home
+Route: `/`
+
+Implement the full homepage described above.
+
+### 2. About Us
+Route: `/about`
+
+Include the company introduction, mission, service approach, team profiles, and contact CTA.
+
+Do not invent company history or achievements.
+
+### 3. Destinations
+Route: `/destinations`
+
+Include:
+- Destination search.
+- Category and region filters.
+- Destination cards.
+- Destination detail links.
+- Empty states and loading states.
+
+Individual destination routes should follow a structure such as `/destinations/istanbul`.
+
+### 4. Tour Packages
+Route: `/packages`
+
+Include:
+- Responsive package grid.
+- Search and filtering.
+- Destination filter.
+- Travel category filter.
+- Duration filter when data is available.
+- Price filter when real prices are available.
+- Sort options.
+- Package detail pages.
+
+Individual package routes should follow a structure such as `/packages/northern-pakistan-adventure`.
+
+### 5. Package Details
+Route: `/packages/:slug`
+
+Display:
+- Package name and image gallery.
+- Destination.
+- Overview.
+- Duration.
+- Itinerary by day.
+- Inclusions and exclusions.
+- Accommodation information, if applicable.
+- Important travel information.
+- Price and currency, when verified.
+- Availability information, when connected to a real source.
+- Inquiry form.
+
+Provide a sticky or clearly visible “Inquire About This Package” CTA on mobile and desktop where appropriate.
+
+### 6. Hotels
+Route: `/hotels`
+
+Include hotel search, destination filters, hotel cards, and inquiry actions.
+
+### 7. Hotel Details
+Route: `/hotels/:slug`
+
+Include verified property information, location, available amenities, room information when supplied, and a hotel inquiry form.
+
+Do not simulate real-time booking inventory.
+
+### 8. Services
+Route: `/services`
+
+Create service sections for:
+- Domestic tour planning.
+- International tour planning.
+- Umrah travel arrangements.
+- Hotel reservations.
+- Flight booking assistance.
+- Customized family holidays.
+- Group travel and corporate trips.
+
+Only describe services actually offered by the agency as confirmed services. Unverified offerings should remain editable draft content until approved.
+
+### 9. Contact Us
+Route: `/contact`
+
+Include:
+- Contact form.
+- Telephone links.
+- WhatsApp inquiry link.
+- Email link.
+- Verified office information.
+- Google Maps embed or directions link, once the correct office location is confirmed.
+- Business hours, when confirmed.
+
+### 10. Booking / Travel Inquiry
+Route: `/booking`
+
+Create a detailed but simple inquiry workflow, not a fake payment or confirmed reservation system.
+
+Form fields:
+- Full name.
+- Email.
+- Phone / WhatsApp number.
+- Service type.
+- Destination.
+- Departure date.
+- Return date.
+- Number of adults.
+- Number of children, if applicable.
+- Number of rooms, for hotel inquiries.
+- Preferred budget and currency, if applicable.
+- Additional requirements.
+- Consent to the privacy policy.
+
+Validate all required fields and show clear error messages.
+
+On successful server-side submission:
+- Save the inquiry to the database.
+- Generate a unique inquiry reference.
+- Show a confirmation message.
+- Send a notification to the agency when email integration is configured.
+- Provide the customer with a confirmation email when that integration is configured.
+
+Never claim that a flight, hotel, tour, or Umrah reservation has been confirmed merely because the inquiry was submitted.
+
+### 11. FAQ
+Route: `/faq`
+
+Include editable FAQs covering inquiries, tour planning, payment procedures, booking confirmations, travel documentation, cancellations, hotel reservations, and Umrah services.
+
+Do not publish unverified policies as established facts.
+
+### 12. Privacy Policy
+Route: `/privacy-policy`
+
+Explain what personal data is collected, why it is collected, how it is used, how it is protected, and how customers can request assistance.
+
+### 13. Terms & Conditions
+Route: `/terms`
+
+Provide editable terms for travel inquiries, reservations, payments, and third-party service arrangements.
+
+### 14. Cancellation / Refund Policy
+Route: `/cancellation-policy`
+
+Provide a clearly editable policy template. Do not invent binding refund deadlines, penalties, or guaranteed refund conditions.
+
+### 15. Custom 404 Page
+Create a branded, helpful not-found page with navigation back to Home, Packages, and Contact.
+
+---
+
+## 7. COMPLETE BOOKING INQUIRY SYSTEM
+
+The inquiry process is a core business requirement.
+
+Implement a reusable inquiry form that can be launched from:
+- Homepage search.
+- Package cards.
+- Package details.
+- Hotel cards.
+- Hotel details.
+- Destination pages.
+- Contact page.
+- WhatsApp inquiry buttons.
+
+When an inquiry is launched from a particular package or hotel, automatically include that item's name and identifier in the form.
+
+Store submitted data in a Supabase database.
+
+Create an inquiries table containing appropriate fields such as:
+- ID.
+- Unique reference number.
+- Customer name.
+- Email.
+- Phone.
+- Service type.
+- Destination.
+- Package or hotel reference, when applicable.
+- Travel dates.
+- Traveler counts.
+- Budget.
+- Additional requirements.
+- Consent status.
+- Submission timestamp.
+- Inquiry status.
+
+Use sensible database constraints and validation.
+
+Suggested inquiry statuses:
+- New
+- Contacted
+- Quoted
+- Confirmed
+- Cancelled
+- Closed
+
+These are internal workflow labels. An inquiry must never be marked confirmed automatically.
+
+Protect all personal information with appropriate Supabase Row Level Security policies.
+
+Public visitors may submit inquiries, but they must not be allowed to read other customers' inquiries.
+
+Administrative access must be restricted to authenticated, authorized users.
+
+Use server-side validation, spam protection, rate limiting where available, and secure error handling.
+
+Do not put sensitive API keys or privileged database credentials in client-side JavaScript.
+
+If credentials are not yet configured, clearly identify the missing setup rather than pretending the integration works.
+
+---
+
+## 8. WHATSAPP INTEGRATION
+
+Add a professional floating WhatsApp contact button on the website.
+
+The button should:
+- Use the official WhatsApp icon.
+- Remain unobtrusive.
+- Be keyboard accessible.
+- Open the official WhatsApp conversation URL.
+- Include a prefilled inquiry message when the visitor is viewing a package or hotel.
+
+Use the following verified project contact candidates, but keep all contact values configurable:
+
+- Primary general inquiry contact: +92 315 3171263
+- Additional business contact: +92 318 3229903
+- Additional contact: +92 300 0226016
+
+Confirm which number should be used for WhatsApp before making it the production default.
+
+Format numbers correctly for WhatsApp international links by removing spaces, plus signs, and punctuation.
+
+Example message:
+“Assalamu Alaikum, I would like to inquire about your travel services. Please share the details.”
+
+For a specific package, automatically include its name in the message.
+
+Do not use the WhatsApp button as a substitute for storing website inquiries.
+
+---
+
+## 9. BUSINESS INFORMATION AND CONFIGURATION
+
+Use the following as initial project configuration values:
+
+- Business name: Pearl Travel & Tours.
+- Website: `https://pearltravelandtours.com`
+- Business email: `sales@pearltravelandtours.com`
+- Additional contact options: the three numbers listed in the WhatsApp section.
+- Office information: use the verified current business address supplied by the owner.
+
+Keep all business details in one centralized settings/configuration source or editable database record rather than scattering them throughout components.
+
+Do not invent an office address, business hours, social media URLs, licensing claims, registration details, or additional telephone numbers.
+
+Where verified information is missing, use an appropriate configuration field and keep the corresponding production UI unpublished or clearly incomplete until the owner supplies the value.
+
+The design must support displaying the agency's applicable Pakistani business and travel licensing information once it is verified.
+
+---
+
+## 10. ADMIN DASHBOARD / CONTENT MANAGEMENT
+
+Create a secure admin area so the agency can update its website without editing code.
+
+Suggested route: `/admin`
+
+Require authentication and authorization. Never expose the dashboard or administrative data to anonymous visitors.
+
+Implement the following modules:
+
+### Dashboard
+- Total inquiries.
+- New inquiries.
+- Inquiries by service type.
+- Recent inquiry list.
+- Quick links to content management.
+
+Use real database information rather than hardcoded statistics.
+
+### Manage Destinations
+- Create destination.
+- Edit destination.
+- Upload or select image.
+- Edit description.
+- Publish or unpublish.
+- Manage SEO title and description.
+
+### Manage Tour Packages
+- Create and edit packages.
+- Set destination.
+- Set duration.
+- Manage itineraries.
+- Manage inclusions and exclusions.
+- Set actual price and currency.
+- Upload images.
+- Publish or unpublish.
+- Set featured status.
+
+### Manage Hotels
+- Create and edit hotel listings.
+- Set destination.
+- Manage verified facilities and descriptions.
+- Update real prices when applicable.
+- Upload images.
+- Publish or unpublish.
+
+### Manage Team
+- Add or remove team profiles.
+- Update biographies and photographs.
+- Publish or unpublish.
+
+### Manage Testimonials
+- Add authentic reviews.
+- Edit or remove approved testimonials.
+- Record source and date when available.
+
+### Manage Inquiries
+- View and filter authorized inquiries.
+- Search by customer or reference.
+- Update inquiry status.
+- Add internal notes.
+- Record follow-up information.
+
+Protect customer information and administrative actions with appropriate access controls.
+
+### Manage Website Settings
+- Company name and description.
+- Logo.
+- Telephone and WhatsApp numbers.
+- Email.
+- Office address.
+- Social media URLs.
+- Homepage content.
+- Footer content.
+- SEO defaults.
+
+If a full admin implementation is blocked by missing external credentials, build the dashboard structure and clearly state what remains to be configured. Do not build fake authentication.
+
+---
+
+## 11. DATABASE DESIGN
+
+Create a clean relational schema using Supabase.
+
+Suggested tables:
+- `profiles`
+- `destinations`
+- `packages`
+- `package_itinerary`
+- `hotels`
+- `team_members`
+- `testimonials`
+- `inquiries`
+- `inquiry_notes`
+- `site_settings`
+- `newsletter_subscribers`, if newsletter functionality is enabled
+
+Use:
+- UUID primary keys where appropriate.
+- Foreign keys and appropriate indexes.
+- Created and updated timestamps.
+- Slugs for public detail-page URLs.
+- Publish status for public content.
+- Proper numeric fields for prices.
+- Explicit currency codes.
+- Appropriate constraints and data validation.
+
+Create migrations or SQL setup scripts for the schema.
+
+Configure Row Level Security policies for every table exposed through Supabase.
+
+Public visitors should only be able to read published public content and submit permitted forms.
+
+Private customer information and internal notes must not be publicly accessible.
+
+Administrative writes must be restricted to authorized users.
+
+Never rely solely on hiding admin buttons in the frontend as a security measure.
+
+---
+
+## 12. SEARCH, FILTERING, AND FUNCTIONALITY
+
+All visible interactive elements must work.
+
+Implement:
+- Navigation links.
+- Mobile menu.
+- Hero search.
+- Date selection and validation.
+- Destination filtering.
+- Tour category filtering.
+- Package sorting.
+- Hotel destination filtering.
+- Featured image gallery.
+- Inquiry forms.
+- WhatsApp links.
+- Telephone links.
+- Email links.
+- Admin navigation.
+- Pagination or load-more functionality when needed.
+- Form success and error states.
+- Loading indicators.
+- Empty states.
+- Responsive dialogs where appropriate.
+
+Avoid dead buttons, placeholder `href="#"` links, nonfunctional search bars, and forms that only show a success message without saving their submissions.
+
+Where a feature depends on an unavailable third-party API, implement an honest inquiry-based fallback.
+
+Do not invent flight prices, availability, hotel inventory, booking confirmations, payment success, or live travel information.
+
+---
+
+## 13. SEO AND ANSWER ENGINE OPTIMIZATION
+
+Optimize the website for Google search and answer engines.
+
+### Technical SEO
+- Unique page titles.
+- Unique meta descriptions.
+- Canonical URLs.
+- XML sitemap.
+- Robots.txt.
+- Correct indexation directives.
+- Semantic HTML.
+- Descriptive image alt text.
+- Clean, readable URLs.
+- Open Graph metadata.
+- Social sharing metadata.
+- Appropriate heading hierarchy.
+- Internal links.
+- Breadcrumb navigation.
+- Mobile-first responsive layouts.
+- Fast page loading.
+- Correct handling of missing pages.
+- Proper redirects when URLs change.
+
+### Structured data
+
+Implement appropriate JSON-LD structured data using verified information only.
+
+Potential types:
+- Organization.
+- TravelAgency or an appropriate supported LocalBusiness subtype.
+- BreadcrumbList.
+- TouristDestination, where applicable.
+- Product or Offer only where the actual content meets the applicable requirements.
+
+Do not create fake AggregateRating, Review, price, availability, or business address values.
+
+Validate structured data and avoid duplicate or conflicting schema markup.
+
+### SEO content
+
+Use natural, helpful content relevant to:
+- Travel agency in Pakistan.
+- Domestic tour packages.
+- Northern Pakistan tours.
+- International holiday packages.
+- Dubai tour inquiries.
+- Umrah travel packages.
+- Hotel reservations.
+- Customized holidays.
+- Family tours.
+- Flight booking assistance.
+
+Use these keywords where relevant and accurate, not as keyword stuffing.
+
+Create editable SEO titles and descriptions for destination and package detail pages.
+
+### Answer engine optimization
+
+Structure helpful content with:
+- Clear question-based headings.
+- Concise answers.
+- Useful FAQs.
+- Specific, verifiable service information.
+- Well-organized destination and package details.
+- Consistent company information.
+- Descriptive internal links.
+
+Never promise first-page Google rankings or guaranteed organic traffic.
+
+---
+
+## 14. PERFORMANCE, ACCESSIBILITY, AND SECURITY
+
+### Performance
+- Optimize and appropriately size images.
+- Use modern image formats where supported.
+- Lazy-load below-the-fold imagery.
+- Prioritize the main hero image.
+- Avoid unnecessary JavaScript.
+- Minimize layout shifts.
+- Use efficient database queries.
+- Add pagination when content grows.
+- Keep animations lightweight.
+- Test the production build.
+
+### Accessibility
+- Use semantic HTML.
+- Maintain sufficient color contrast.
+- Provide keyboard navigation.
+- Add visible focus states.
+- Label every form field.
+- Provide accessible error messages.
+- Use appropriate alt text.
+- Ensure mobile touch targets are sufficiently large.
+- Respect reduced-motion preferences.
+
+### Security
+- Validate form input on the server.
+- Apply database access policies.
+- Protect admin routes.
+- Keep secrets out of client bundles.
+- Prevent public access to private inquiries.
+- Add appropriate spam controls.
+- Avoid unsafe rendering of user-submitted content.
+- Use secure authentication and session handling.
+- Do not store card information or implement simulated payment processing.
+
+---
+
+## 15. CONTENT AND INITIAL DATA
+
+Populate the website with a small, carefully structured set of editable draft records for the design and development process.
+
+Use the suggested destinations and package categories defined above.
+
+For missing business-specific details:
+- Do not fabricate prices.
+- Do not invent customer reviews.
+- Do not invent team members.
+- Do not invent travel schedules.
+- Do not invent partner hotels.
+- Do not invent availability.
+- Do not invent licensing claims.
+- Do not invent customer statistics.
+
+Clearly distinguish development preview content from verified, published content.
+
+The production site must not expose fabricated content as real business information.
+
+Where possible, make all homepage sections configurable from the admin dashboard.
+
+---
+
+## 16. COMPONENT ARCHITECTURE
+
+Use reusable components, including but not limited to:
+
+- `Navbar`
+- `MobileNavigation`
+- `HeroSection`
+- `TravelSearchForm`
+- `WhyChooseUs`
+- `DestinationCard`
+- `DestinationGrid`
+- `FeaturedDestinations`
+- `PackageCard`
+- `PackageGrid`
+- `HotelCard`
+- `HotelGrid`
+- `ImageGallery`
+- `AboutSection`
+- `TestimonialCard`
+- `TeamMemberCard`
+- `FinalCTA`
+- `Footer`
+- `WhatsAppButton`
+- `InquiryForm`
+- `ContactForm`
+- `Breadcrumbs`
+- `LoadingState`
+- `EmptyState`
+- `ErrorState`
+- `ProtectedAdminRoute`
+
+Keep data separate from presentation wherever practical.
+
+Use consistent spacing, border-radius, typography, button styles, and card styles throughout the application.
+
+---
+
+## 17. REQUIRED ROUTES
+
+At minimum, implement:
+
+- `/`
+- `/about`
+- `/destinations`
+- `/destinations/:slug`
+- `/packages`
+- `/packages/:slug`
+- `/hotels`
+- `/hotels/:slug`
+- `/services`
+- `/contact`
+- `/booking`
+- `/faq`
+- `/privacy-policy`
+- `/terms`
+- `/cancellation-policy`
+- `/admin`
+- A branded not-found page
+
+Ensure direct navigation to detail-page URLs works correctly after deployment.
+
+---
+
+## 18. FINAL QUALITY ASSURANCE
+
+Before considering the project complete, review the entire implementation.
+
+Verify that:
+
+1. The homepage closely follows the uploaded reference screenshot.
+2. The official Pearl Travel & Tours logo is preserved.
+3. Navy blue, gold, and white are applied consistently.
+4. Every page is responsive on mobile, tablet, and desktop.
+5. Every navigation link leads to the correct page.
+6. All buttons have meaningful actions.
+7. Search and filter functionality works.
+8. Forms validate user input.
+9. Inquiry submission saves data when backend credentials are configured.
+10. Anonymous users cannot read private customer inquiries.
+11. Admin access is protected.
+12. No secret keys are exposed in frontend code.
+13. Unverified prices, reviews, staff, and availability are not presented as facts.
+14. All images load correctly.
+15. Empty, loading, and error states are implemented.
+16. SEO metadata and structured data are present where appropriate.
+17. There are no broken routes or obvious console errors.
+18. The application builds successfully.
+19. Deployment configuration and required environment variables are documented.
+20. The site is ready for the owner to add verified business content and deploy.
+
+Fix discovered issues rather than merely listing them.
+
+---
+
+## 19. EXECUTION INSTRUCTIONS
+
+Build the website in the current Lovable project.
+
+Use the uploaded screenshot as the visual reference throughout development and the uploaded logo as the official branding asset.
+
+Prioritize the visual fidelity of the homepage, the quality of the responsive UI, the functionality of the inquiry workflow, the security of customer data, and the maintainability of the code.
+
+Do not stop after producing a homepage preview.
+
+Implement all required public pages, reusable components, database schema and policies, inquiry workflows, and the admin dashboard structure.
+
+If a feature depends on external credentials, explain the exact missing configuration and complete all independent work that can be completed without it.
+
+Do not claim external integrations are live unless they have been configured and tested.
+
+At the end, provide a concise implementation report covering:
+- Pages and features completed.
+- Backend and database setup.
+- Required environment variables.
+- Any external integrations still requiring credentials.
+- Steps needed to connect the custom domain `pearltravelandtours.com`.
+- Deployment and final testing instructions.
+
+**Final objective:** Deliver a polished, trustworthy, conversion-focused travel agency website that closely resembles the uploaded design, preserves Pearl Travel & Tours' identity, works across devices, and provides a practical foundation for managing travel inquiries and website content in production.

@@ -1,0 +1,6 @@
+{
+  "name": "Pearl Travel & Tours",
+  "description": "Explore the World with Pearl. Domestic & international tour packages, Umrah services, luxury & economy hotel reservations, and custom holiday planning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
